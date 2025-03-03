@@ -90,8 +90,7 @@ async function fetchTranscriptWithFallback(videoId: string): Promise<string | nu
   try {
     // Try official YouTube transcript API first
     const transcriptItems = await YoutubeTranscript.fetchTranscript(videoId, {
-      lang: "tr", // Prefer English captions
-      
+      lang: "en", // Prefer English captions
     })
 
     return transcriptItems
